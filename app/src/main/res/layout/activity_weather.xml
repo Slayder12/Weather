@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeatherActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Погода"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/cityET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/widget_border"
+            android:textColor="@color/black"
+            android:hint="Введите город"
+            android:textAlignment="center" />
+
+
+        <Button
+            android:id="@+id/getDataBTN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Получить данные"
+            android:background="@drawable/widget_border"
+            android:textSize="18sp"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:id="@+id/cityTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Город"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <TextView
+            android:id="@+id/temperatureTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="t,c"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <ImageView
+            android:id="@+id/imageIV"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/baseline_sunny_24" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/windDirectionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Направление"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/windSpeedTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Скорость"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/atmosphericPressureTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Атмосферное давление"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
