@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/containerID"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/weather_background"
     tools:context=".WeatherActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,7 +18,7 @@
             android:id="@+id/titleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Погода"
+            android:text="@string/title_text"
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:textStyle="bold"
@@ -31,30 +33,43 @@
 
 
         <EditText
+            android:inputType="text"
             android:id="@+id/cityET"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="15dp"
             android:background="@drawable/widget_border"
             android:textColor="@color/black"
-            android:hint="Введите город"
+            android:hint="@string/input_city"
             android:textAlignment="center" />
 
 
-        <Button
-            android:id="@+id/getDataBTN"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getDataByCityBTN"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Получить данные"
-            android:background="@drawable/widget_border"
-            android:textSize="18sp"
-            android:layout_margin="15dp" />
+            android:layout_margin="15dp"
+            android:background="@drawable/button_border"
+            android:text="@string/get_data_text"
+            android:textSize="15sp"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getCurrentDataBTN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/button_border"
+            android:text="@string/by_current_location"
+            android:textSize="15sp"
+            />
+
 
         <TextView
             android:id="@+id/cityTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Город"
+            android:hint="@string/city_text"
             android:padding="8dp"
             android:gravity="center"
             android:textSize="20sp"
@@ -66,10 +81,12 @@
             android:id="@+id/temperatureTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="t,c"
+            android:hint="@string/t_c"
+            android:textStyle="bold"
             android:padding="8dp"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="20sp"
+
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"/>
 
@@ -87,8 +104,10 @@
                 android:id="@+id/windDirectionTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Направление"
+                android:hint="@string/direction_wind"
+                android:background="@drawable/widget_background"
                 android:textColor="@color/black"
+                android:textStyle="italic"
                 android:textSize="16sp"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -98,7 +117,9 @@
                 android:id="@+id/windSpeedTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Скорость"
+                android:hint="@string/speed_wind"
+                android:textStyle="italic"
+                android:background="@drawable/widget_background"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:gravity="center"
@@ -108,17 +129,36 @@
 
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TextView
             android:id="@+id/atmosphericPressureTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Атмосферное давление"
+            android:hint="@string/pressure_text"
+            android:textStyle="italic"
+            android:background="@drawable/widget_background"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/humidityTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/humidity_text"
+            android:textStyle="italic"
+            android:background="@drawable/widget_background"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_margin="8dp"
             />
+        </TableRow>
 
     </LinearLayout>
 

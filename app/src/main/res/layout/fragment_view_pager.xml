@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startBTN"
         android:layout_width="117dp"
         android:layout_height="59dp"
@@ -71,6 +71,7 @@
         android:text="Начать"
         android:textSize="16sp"
         android:visibility="gone"
+        android:background="@drawable/button_border"
         app:layout_constraintBottom_toTopOf="@+id/infoViewPagerTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

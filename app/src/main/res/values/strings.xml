@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="api_Kay">efc9407d4b1762dcc295a81719b4f3f3</string>
+    <string name="title_text">Погода</string>
+    <string name="input_city">Введите город</string>
+    <string name="get_data_text">Получить данные</string>
+    <string name="by_current_location">По текущему местоположению</string>
+    <string name="city_text">Город</string>
+    <string name="t_c">t,c</string>
+    <string name="direction_wind">Направление</string>
+    <string name="speed_wind">Скорость</string>
+    <string name="pressure_text">Атмосферное давление</string>
+    <string name="humidity_text">Влажность</string>
 </resources>
